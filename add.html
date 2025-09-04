@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+    <link href="./style.css" rel="stylesheet">
+    <style>
+        body{
+    text-align: center;
+      }
+
+.add{
+  background-color: rgb(197, 235, 235);
+  margin: 20px 100px;
+}
+
+#AddingMoName{
+    font-size: 80px;
+    background-color: rgb(199, 206, 206);
+    margin: 20px 0px;
+    width: 100%; 
+}
+
+#btnMoName{
+    padding: 10px;
+    width: 1600px;
+    background-color: rgb(199, 206, 206);
+    margin: 20px 0px;
+}
+#btnAdd{
+    padding: 10px;
+    margin: 2px;
+    width: 100px;
+    background-color: rgb(175, 175, 166);
+    border-radius: 15px;
+    font-weight: 900px !important;
+}
+    </style>
+</head>
+<body>
+    <nav>
+    <div>
+      <a class="webName">Show<span>Trackr</span></a>
+      <a class="alink" href="./index.html">Home</a>
+      <a  class="alink" href="./add.html">Add</a>
+      <a class="alink" href="./detail.html">Details</a>
+    </div>
+    <div>
+      <a class="alink" href="./login.html">Login</a>
+      <a class="alink" href="./signup.html">Sign Up</a>
+    </div>
+    </nav>
+
+
+    <div class="add">
+    <h2 id="AddingMoName">Adding the movie</h2>
+    <form >
+      <div style="text-align:left">
+        <label >Name</label>
+      </div>
+      
+      <input id="btnMoName" type="text"  placeholder="Enter your fav movie" required/><br>
+      <button id="btnAdd" type="Submit" onclick="addmovie()">Add</button>
+    </form>
+  </div>
+ 
+
+
+  <script>
+    function addmovie() {
+   const movieInput = document.getElementById("btnMoName").value.trim();
+
+
+   if (movieInput === "") {
+      alert("Please Enter The movie.");
+      return;
+   }
+
+   let movies = JSON.parse(localStorage.getItem("movies"));
+   movies.push(movieInput);
+
+    
+   displaymovies();
+}
+
+function displaymovies() {
+   const movies = JSON.parse(localStorage.getItem("movies"));
+  alert(movies);}
+  
+  </script>
+
+</body>
+</html>

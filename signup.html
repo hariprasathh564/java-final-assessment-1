@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link href="./style.css" rel="stylesheet">
+    <style>
+        .sigup a{
+            text-decoration: none !important;
+        }
+
+        .sigUp a:hover{
+            background-color: rgb(134, 134, 190);
+            font-weight: 900;
+        }
+
+        .btnSubmit:hover {
+            background-color: #025fc4;
+        }
+
+        p{
+            margin-top: 15px;
+            font-size: 14px;
+            padding: 5px;
+        }
+        
+        .form{
+            background-color: rgb(255, 255, 255);
+            padding: 50px;
+            margin: 100px 200px 200px 600px;
+            width: 300px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+         form input{
+            width: 100%;
+            padding:8px;
+            margin: 8px 2px;
+            border: 1px solid #ddd7d7;
+            border-radius: 4px;
+            }
+
+        button{
+            cursor: pointer;
+            font-weight: 900;
+            color: rgb(12, 0, 0);
+            border-radius: 30px;
+            padding: 8px;
+            width: 100%;
+            background-color: #4e9aeb;
+            }
+         .form h2{
+            font-size: 40px;
+            font-weight:900;
+         }
+
+    </style>
+</head>
+<body>
+    
+    <nav>
+    <div>
+      <a class="webName">Show<span>Trackr</span></a>
+      <a class="alink" href="./index.html">Home</a>
+      <a  class="alink" href="./add.html">Add</a>
+      <a class="alink" href="./detail.html">Details</a>
+    </div>
+    <div>
+      <a class="alink" href="./login.html">Login</a>
+      <a class="alink" href="./signup.html">Sign Up</a>
+    </div>
+    </nav>
+
+    <div class="form">
+     <h2>Sign UP</h2>
+    <form>
+        <input id="name" placeholder="👦 enter your name" required>
+        <input id="email" type="email" placeholder="💻 enter your email" required>
+        <input id="password" type="password" placeholder="🔐 enter your password" required>
+        <button  class="btnSubmit" type="submit" onclick="login(form)">Sign Up</button>
+      </form>
+      <p>by clicking on signup,<b>you agree to term & condition</b> and <b>privacy policy.</b></p>
+      <p class="sigUp">Don't have an account? <a href="./login.html">log in </a>now</p>
+  </div>
+
+  
+<script>
+    function login(form) {
+
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var name = document.getElementById("name").value;
+
+  if (email===""||password===""||name===""){
+    alert("Please enter name, email and password");
+  } else {
+    alert("signup successfully");
+  }
+}
+</script>
+</body>
+</html>
